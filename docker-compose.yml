@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: ./
+    command: pip install flask
+    command: python app.py
+    ports:
+     - "5000:80"
+    volumes:
+     - ./web:/code # modified here to take into account the new app path
